@@ -11,7 +11,7 @@ plt.scatter(x, y)
 plt.ylabel('Sepal Width')
 plt.xlabel('Sepal Length')
 plt.tight_layout()
-plt.savefig('../figures/scatter_default.pdf')
+plt.savefig('../figures/scatter_default.png')
 plt.show()
 
 with plt.style.context(sp.get_style('mmll')):
@@ -20,7 +20,7 @@ with plt.style.context(sp.get_style('mmll')):
     plt.ylabel('Sepal Width')
     plt.xlabel('Sepal Length')
     sp.polish(fig, ax)
-    plt.savefig('../figures/scatter_mmll.pdf')
+    plt.savefig('../figures/scatter_mmll.png')
     plt.show()
 
 

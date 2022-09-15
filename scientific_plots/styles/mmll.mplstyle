@@ -1,0 +1,71 @@
+figure.figsize   : 3.5, 3.5    # figure size in inches
+figure.dpi       : 300      # figure dots per inch
+
+pdf.fonttype: 42
+ps.fonttype: 42
+
+font.size: 6
+axes.titlesize: 6
+axes.labelsize: 6
+xtick.labelsize: 6
+ytick.labelsize: 6
+legend.fontsize: 6
+
+lines.markerfacecolor  : auto    ## the default markerfacecolor
+lines.markeredgewidth: 0.5
+lines.markeredgecolor  : black    ## the default markeredgecolor
+lines.linewidth: 0.5
+grid.linewidth: 0.5
+contour.linewidth: 0.5
+axes.linewidth: 0.5
+patch.linewidth: 0.5
+patch.facecolor        : 000000
+patch.edgecolor        : black   ## if forced, or patch is not filled
+patch.force_edgecolor  : True   ## True to always use edgecolor
+
+scatter.marker : o               ## The default marker type for scatter plots.
+scatter.edgecolors :  000000  ## The default edge colors for scatter plots.
+                                 ## Keyword options: 'face'
+
+
+xtick.minor.size: 1
+xtick.major.size: 2
+ytick.minor.size: 1
+ytick.major.size: 2
+
+xtick.direction: in
+ytick.direction: in
+
+font.family: Lato, sans-serif
+font.sans-serif: Arial, Liberation Sans, DejaVu Sans, Bitstream Vera Sans, sans-serif
+
+
+axes.axisbelow: True
+axes.labelcolor: .15
+axes.prop_cycle: cycler('color', ['4C72B0', '55A868', 'C44E52', '8172B2', 'CCB974', '64B5CD'])
+
+figure.facecolor: white
+
+grid.color: white
+grid.linestyle: -
+
+image.cmap: Greys
+
+legend.frameon: False
+legend.numpoints: 1
+legend.scatterpoints: 1
+
+lines.markersize: 4
+lines.solid_capstyle: round
+
+text.color: .15
+xtick.color: .15
+ytick.color: .15
+
+xtick.major.width: 0.8
+ytick.major.width: 0.8
+xtick.minor.width: 0.4
+ytick.minor.width: 0.4
+
+xtick.major.pad: 5.6
+ytick.major.pad: 5.6

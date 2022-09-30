@@ -9,7 +9,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 def error_bars(x: str, y: str, data: pd.DataFrame, central_tendency: str = 'median',
                error_method: str = 'percentile',
                sections: dict = None, colors: list = None,
-               xlim: tuple = None):
+               xlim: tuple = None, cax_percentage: str = "40%"):
     """
     Plot fancy error bar
     Design is basically copied from this recent Covid-19 paper: https://www.medrxiv.org/content/10.1101/2021.03.25.21254330v1.full.pdf
@@ -22,6 +22,7 @@ def error_bars(x: str, y: str, data: pd.DataFrame, central_tendency: str = 'medi
     :param sections: dictionary of section names and corresponding group names
     :param colors: list of colors, length should correspond to number of sections or groups
     :param xlim: x axis limits
+    :param cax_percentage: how big do you want the y labels to be
     :return:
         fig: matplotlib figure
         ax: matplotlib main plot axis
@@ -147,7 +148,7 @@ def error_bars(x: str, y: str, data: pd.DataFrame, central_tendency: str = 'medi
                 color='#939596', alpha=0.25, linewidth=0)
 
     # plot scatter points for central tendency
-    ax.scatter(m, y_coord_bars, marker="o", color=colors_bars, s=4, edgecolors=colors_bars, facecolor="white",
+    ax.scatter(m, y_coord_bars, marker="o", color=colors_bars, s=6, edgecolors=colors_bars, facecolor="white",
                zorder=5)
 
     # style
@@ -164,7 +165,7 @@ def error_bars(x: str, y: str, data: pd.DataFrame, central_tendency: str = 'medi
     # plot additional axis to get fancy y tick labels
     divider = make_axes_locatable(ax)
     # 50% might be adjusted depending on the length of the y tick labels
-    cax = divider.append_axes("left", size="40%", pad=0)
+    cax = divider.append_axes("left", size=cax_percentage, pad=0)
 
     cax.get_xaxis().set_visible(False)
     cax.get_yaxis().set_visible(False)
